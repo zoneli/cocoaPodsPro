@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200C87BF67DB31F59B314E36 /* Pods_MyCocoaPodPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B78F3B28438FC8631583AE /* Pods_MyCocoaPodPro.framework */; };
 		E16DB5DB1CF003CA007DA161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5DA1CF003CA007DA161 /* main.m */; };
 		E16DB5DE1CF003CA007DA161 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5DD1CF003CA007DA161 /* AppDelegate.m */; };
 		E16DB5E11CF003CA007DA161 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5E01CF003CA007DA161 /* FirstViewController.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12CBD39AA1E433D18A1D149C /* Pods-MyCocoaPodPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaPodPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro.debug.xcconfig"; sourceTree = "<group>"; };
+		34764DC0C751F4BE753EA9AC /* Pods-MyCocoaPodPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaPodPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro.release.xcconfig"; sourceTree = "<group>"; };
+		A7B78F3B28438FC8631583AE /* Pods_MyCocoaPodPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCocoaPodPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16DB5D61CF003CA007DA161 /* MyCocoaPodPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCocoaPodPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16DB5DA1CF003CA007DA161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E16DB5DC1CF003CA007DA161 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200C87BF67DB31F59B314E36 /* Pods_MyCocoaPodPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC8AE6A058CC770A9B2C421 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7B78F3B28438FC8631583AE /* Pods_MyCocoaPodPro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		532EA64229B5C200F389C89F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12CBD39AA1E433D18A1D149C /* Pods-MyCocoaPodPro.debug.xcconfig */,
+				34764DC0C751F4BE753EA9AC /* Pods-MyCocoaPodPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E16DB5CD1CF003CA007DA161 = {
 			isa = PBXGroup;
 			children = (
 				E16DB5D81CF003CA007DA161 /* MyCocoaPodPro */,
 				E16DB5D71CF003CA007DA161 /* Products */,
+				532EA64229B5C200F389C89F /* Pods */,
+				0BC8AE6A058CC770A9B2C421 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E16DB5F01CF003CA007DA161 /* Build configuration list for PBXNativeTarget "MyCocoaPodPro" */;
 			buildPhases = (
+				797E4DA61A74A5B29E58830E /* 📦 Check Pods Manifest.lock */,
 				E16DB5D21CF003CA007DA161 /* Sources */,
 				E16DB5D31CF003CA007DA161 /* Frameworks */,
 				E16DB5D41CF003CA007DA161 /* Resources */,
+				6071B0118F65744A124177D9 /* 📦 Embed Pods Frameworks */,
+				44C781DF2894C152616E2D02 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44C781DF2894C152616E2D02 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6071B0118F65744A124177D9 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797E4DA61A74A5B29E58830E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E16DB5D21CF003CA007DA161 /* Sources */ = {
@@ -267,6 +342,7 @@
 		};
 		E16DB5F11CF003CA007DA161 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12CBD39AA1E433D18A1D149C /* Pods-MyCocoaPodPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyCocoaPodPro/Info.plist;
@@ -278,6 +354,7 @@
 		};
 		E16DB5F21CF003CA007DA161 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34764DC0C751F4BE753EA9AC /* Pods-MyCocoaPodPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyCocoaPodPro/Info.plist;
@@ -306,6 +383,7 @@
 				E16DB5F21CF003CA007DA161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
