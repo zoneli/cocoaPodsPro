@@ -15,6 +15,10 @@
 		E16DB5E71CF003CA007DA161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16DB5E51CF003CA007DA161 /* Main.storyboard */; };
 		E16DB5E91CF003CA007DA161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16DB5E81CF003CA007DA161 /* Assets.xcassets */; };
 		E16DB5EC1CF003CA007DA161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16DB5EA1CF003CA007DA161 /* LaunchScreen.storyboard */; };
+		E16DB5F71CF03B89007DA161 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5F61CF03B89007DA161 /* ThirdViewController.m */; };
+		E16DB5FA1CF03BB4007DA161 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5F91CF03BB4007DA161 /* FourthViewController.m */; };
+		E16DB6001CF03F18007DA161 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5FF1CF03F18007DA161 /* RootNavViewController.m */; };
+		E16DB6031CF03F69007DA161 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB6021CF03F69007DA161 /* MainTabbarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,14 @@
 		E16DB5E81CF003CA007DA161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16DB5EB1CF003CA007DA161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16DB5ED1CF003CA007DA161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E16DB5F51CF03B89007DA161 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		E16DB5F61CF03B89007DA161 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		E16DB5F81CF03BB4007DA161 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		E16DB5F91CF03BB4007DA161 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		E16DB5FE1CF03F18007DA161 /* RootNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavViewController.h; sourceTree = "<group>"; };
+		E16DB5FF1CF03F18007DA161 /* RootNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavViewController.m; sourceTree = "<group>"; };
+		E16DB6011CF03F69007DA161 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
+		E16DB6021CF03F69007DA161 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +99,18 @@
 			children = (
 				E16DB5DC1CF003CA007DA161 /* AppDelegate.h */,
 				E16DB5DD1CF003CA007DA161 /* AppDelegate.m */,
+				E16DB5FE1CF03F18007DA161 /* RootNavViewController.h */,
+				E16DB5FF1CF03F18007DA161 /* RootNavViewController.m */,
+				E16DB6011CF03F69007DA161 /* MainTabbarViewController.h */,
+				E16DB6021CF03F69007DA161 /* MainTabbarViewController.m */,
 				E16DB5DF1CF003CA007DA161 /* FirstViewController.h */,
 				E16DB5E01CF003CA007DA161 /* FirstViewController.m */,
 				E16DB5E21CF003CA007DA161 /* SecondViewController.h */,
 				E16DB5E31CF003CA007DA161 /* SecondViewController.m */,
+				E16DB5F51CF03B89007DA161 /* ThirdViewController.h */,
+				E16DB5F61CF03B89007DA161 /* ThirdViewController.m */,
+				E16DB5F81CF03BB4007DA161 /* FourthViewController.h */,
+				E16DB5F91CF03BB4007DA161 /* FourthViewController.m */,
 				E16DB5E51CF003CA007DA161 /* Main.storyboard */,
 				E16DB5E81CF003CA007DA161 /* Assets.xcassets */,
 				E16DB5EA1CF003CA007DA161 /* LaunchScreen.storyboard */,
@@ -229,8 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16DB5FA1CF03BB4007DA161 /* FourthViewController.m in Sources */,
 				E16DB5E41CF003CA007DA161 /* SecondViewController.m in Sources */,
+				E16DB6001CF03F18007DA161 /* RootNavViewController.m in Sources */,
+				E16DB5F71CF03B89007DA161 /* ThirdViewController.m in Sources */,
 				E16DB5DE1CF003CA007DA161 /* AppDelegate.m in Sources */,
+				E16DB6031CF03F69007DA161 /* MainTabbarViewController.m in Sources */,
 				E16DB5E11CF003CA007DA161 /* FirstViewController.m in Sources */,
 				E16DB5DB1CF003CA007DA161 /* main.m in Sources */,
 			);
