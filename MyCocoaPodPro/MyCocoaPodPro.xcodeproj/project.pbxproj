@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		200C87BF67DB31F59B314E36 /* Pods_MyCocoaPodPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B78F3B28438FC8631583AE /* Pods_MyCocoaPodPro.framework */; };
+		E149BA141D63459B002BD8B4 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E149BA131D63459B002BD8B4 /* 1.mp4 */; };
 		E16DB5DB1CF003CA007DA161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5DA1CF003CA007DA161 /* main.m */; };
 		E16DB5DE1CF003CA007DA161 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5DD1CF003CA007DA161 /* AppDelegate.m */; };
 		E16DB5E11CF003CA007DA161 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5E01CF003CA007DA161 /* FirstViewController.m */; };
@@ -25,6 +26,7 @@
 		12CBD39AA1E433D18A1D149C /* Pods-MyCocoaPodPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaPodPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro.debug.xcconfig"; sourceTree = "<group>"; };
 		34764DC0C751F4BE753EA9AC /* Pods-MyCocoaPodPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCocoaPodPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCocoaPodPro/Pods-MyCocoaPodPro.release.xcconfig"; sourceTree = "<group>"; };
 		A7B78F3B28438FC8631583AE /* Pods_MyCocoaPodPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCocoaPodPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E149BA131D63459B002BD8B4 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		E16DB5D61CF003CA007DA161 /* MyCocoaPodPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCocoaPodPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16DB5DA1CF003CA007DA161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E16DB5DC1CF003CA007DA161 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E149BA121D63459B002BD8B4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E149BA131D63459B002BD8B4 /* 1.mp4 */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		E16DB5CD1CF003CA007DA161 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		E16DB5D81CF003CA007DA161 /* MyCocoaPodPro */ = {
 			isa = PBXGroup;
 			children = (
+				E149BA121D63459B002BD8B4 /* Source */,
 				E16DB5DC1CF003CA007DA161 /* AppDelegate.h */,
 				E16DB5DD1CF003CA007DA161 /* AppDelegate.m */,
 				E16DB5FE1CF03F18007DA161 /* RootNavViewController.h */,
@@ -189,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E16DB5EC1CF003CA007DA161 /* LaunchScreen.storyboard in Resources */,
+				E149BA141D63459B002BD8B4 /* 1.mp4 in Resources */,
 				E16DB5E91CF003CA007DA161 /* Assets.xcassets in Resources */,
 				E16DB5E71CF003CA007DA161 /* Main.storyboard in Resources */,
 			);

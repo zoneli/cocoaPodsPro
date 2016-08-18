@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyCocoaPodPro/FourthViewController.m"
-            timestampString = "492598542.921527"
+            filePath = "MyCocoaPodPro/ThirdViewController.m"
+            timestampString = "493049487.677561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-test"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-playerItemDidPlayToEndTime:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
