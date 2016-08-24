@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyCocoaPodPro/ThirdViewController.m"
-            timestampString = "493049487.677561"
+            filePath = "MyCocoaPodPro/SecondViewController.m"
+            timestampString = "493652581.12634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-playerItemDidPlayToEndTime:"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "-captureOutput:didOutputSampleBuffer:fromConnection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCocoaPodPro/SecondViewController.m"
+            timestampString = "493652730.677991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "-stopCarmera"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

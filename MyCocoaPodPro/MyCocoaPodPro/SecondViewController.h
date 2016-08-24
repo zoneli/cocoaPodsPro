@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SecondViewController : UIViewController
-
+#import <AVFoundation/AVFoundation.h>
+@interface SecondViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate>
+@property IBOutlet UIButton *btn;
+@property IBOutlet UIButton *endBtn;
 
 @end
 
