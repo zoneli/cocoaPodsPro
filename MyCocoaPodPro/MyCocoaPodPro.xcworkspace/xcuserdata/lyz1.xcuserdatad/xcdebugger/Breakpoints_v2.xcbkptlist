@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCocoaPodPro/SecondViewController.m"
-            timestampString = "493652581.12634"
+            timestampString = "493743712.378675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "-captureOutput:didOutputSampleBuffer:fromConnection:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyCocoaPodPro/SecondViewController.m"
-            timestampString = "493652730.677991"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "-stopCarmera"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "-bufferTransToImage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

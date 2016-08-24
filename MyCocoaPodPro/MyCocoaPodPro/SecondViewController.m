@@ -15,13 +15,11 @@
 @interface SecondViewController ()
 {
     AVCaptureSession *captureSession;
-    
     dispatch_queue_t _audioQueue;
-    
     AVCaptureConnection* _audioConnection;
     AVCaptureConnection* _videoConnection;
-    
     NSMutableData *_data;
+    UIImageView *tempView;
 }
 @end
 
@@ -31,6 +29,11 @@
     [super viewDidLoad];
     _data = [[NSMutableData alloc] init];
     captureSession = [[AVCaptureSession alloc] init];
+    
+    tempView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 260, self.view.frame.size.width, 200)];
+    tempView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:tempView];
+    
     [_btn addTarget:self action:@selector(btnToucheUpInside:) forControlEvents:UIControlEventTouchUpInside];
     [_endBtn addTarget:self action:@selector(endBtnToucheUpInside:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -99,16 +102,15 @@
     //    cameraDevice.position = AVCaptureDevicePositionBack;
     AVCaptureDeviceInput *inputDevice = [AVCaptureDeviceInput deviceInputWithDevice:cameraDevice error:&deviceError];
     
+
     // make output device
     
     AVCaptureVideoDataOutput *outputDevice = [[AVCaptureVideoDataOutput alloc] init];
-    
-    NSString* key = (NSString*)kCVPixelBufferPixelFormatTypeKey;
-    
-    NSNumber* val = [NSNumber
-                     numberWithUnsignedInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange];
-    NSDictionary* videoSettings =
-    [NSDictionary dictionaryWithObject:val forKey:key];
+    outputDevice.videoSettings = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey: (id)kCVPixelBufferPixelFormatTypeKey];
+//    NSNumber* val = [NSNumber
+//                     numberWithUnsignedInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange];
+//    NSDictionary* videoSettings =
+//    [NSDictionary dictionaryWithObject:val forKey:key];
     
     NSError *error;
     [cameraDevice lockForConfiguration:&error];
@@ -125,15 +127,10 @@
         // handle error2
     }
     [cameraDevice unlockForConfiguration];
-    
-    
-    
-    outputDevice.videoSettings = videoSettings;
-    
+//    outputDevice.videoSettings = videoSettings;
     [outputDevice setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
     
     // initialize capture session
-    
     if ([captureSession canAddInput:inputDevice]) {
         [captureSession addInput:inputDevice];
     }
@@ -146,13 +143,12 @@
     
     // picture resolution
     [captureSession setSessionPreset:[NSString stringWithString:AVCaptureSessionPreset640x480]];
-    
     _videoConnection = [outputDevice connectionWithMediaType:AVMediaTypeVideo];
     
     //Set landscape (if required)
     if ([_videoConnection isVideoOrientationSupported])
     {
-        AVCaptureVideoOrientation orientation = AVCaptureVideoOrientationLandscapeRight;        //<<<<<SET VIDEO ORIENTATION IF LANDSCAPE
+        AVCaptureVideoOrientation orientation = AVCaptureVideoOrientationPortrait;        //<<<<<SET VIDEO ORIENTATION IF LANDSCAPE
         [_videoConnection setVideoOrientation:orientation];
     }
     
@@ -167,7 +163,7 @@
     double dPTS = (double)(pts.value) / pts.timescale;
     
     if (connection == _videoConnection) {
-    
+        [self bufferTransToImage:sampleBuffer];
     } else if (connection == _audioConnection) {
         CMBlockBufferRef blockBufferRef = CMSampleBufferGetDataBuffer(sampleBuffer);
         size_t length = CMBlockBufferGetDataLength(blockBufferRef);
@@ -178,6 +174,41 @@
     }
     
 }
+- (void)bufferTransToImage:(CMSampleBufferRef)sampleBuffer {
+//    if (tempView) {
+//        return;
+//    }
+        CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+        CVPixelBufferLockBaseAddress(imageBuffer,0);        // Lock the image buffer
+        
+        // Get information of the image
+        size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+        size_t width = CVPixelBufferGetWidth(imageBuffer);
+        size_t height = CVPixelBufferGetHeight(imageBuffer);
+//        uint8_t *baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0);
+        void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef newContext = CGBitmapContextCreate(baseAddress, width, height, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+        CGImageRef newImage = CGBitmapContextCreateImage(newContext);
+        CGContextRelease(newContext);
+        
+        CGColorSpaceRelease(colorSpace);
+        CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+        /* CVBufferRelease(imageBuffer); */  // do not call this!
+        
+        
+        UIImage *image;
+        image = [UIImage imageWithCGImage:newImage];
+        CGImageRelease(newImage);
+//    if (tempView==nil) {
+//        tempView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, 100)];
+//        tempView.backgroundColor = [UIColor clearColor];
+        tempView.image = image;
+//        [self.view addSubview:tempView];
+//    }
+}
+
 #pragma mark
 #pragma mark - 视频数据回调
 - (void)gotEncodedData:(NSData*)data isKeyFrame:(BOOL)isKeyFrame
