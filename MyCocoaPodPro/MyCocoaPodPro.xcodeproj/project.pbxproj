@@ -312,8 +312,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Yanfeng (U89E685JA7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Li Yanfeng (U89E685JA7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -332,10 +332,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "1ccf6ab8-ce67-4973-82ec-cdd337ebfcdf";
+				PROVISIONING_PROFILE = "c17316e3-7d8d-40d6-be31-9ebac028fb98";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -358,8 +358,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Yanfeng (U89E685JA7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Li Yanfeng (U89E685JA7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -372,10 +372,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "1ccf6ab8-ce67-4973-82ec-cdd337ebfcdf";
+				PROVISIONING_PROFILE = "c17316e3-7d8d-40d6-be31-9ebac028fb98";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -386,12 +386,13 @@
 			baseConfigurationReference = 12CBD39AA1E433D18A1D149C /* Pods-MyCocoaPodPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Yanfeng (U89E685JA7)";
 				INFOPLIST_FILE = MyCocoaPodPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Maintools.Detection;
+				PRODUCT_BUNDLE_IDENTIFIER = xnc518;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ccf6ab8-ce67-4973-82ec-cdd337ebfcdf";
+				PROVISIONING_PROFILE = "c17316e3-7d8d-40d6-be31-9ebac028fb98";
 			};
 			name = Debug;
 		};
@@ -400,12 +401,13 @@
 			baseConfigurationReference = 34764DC0C751F4BE753EA9AC /* Pods-MyCocoaPodPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenjun Xiong (A76YEHJ64Q)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Yanfeng (U89E685JA7)";
 				INFOPLIST_FILE = MyCocoaPodPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Maintools.Detection;
+				PRODUCT_BUNDLE_IDENTIFIER = xnc518;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ccf6ab8-ce67-4973-82ec-cdd337ebfcdf";
+				PROVISIONING_PROFILE = "c17316e3-7d8d-40d6-be31-9ebac028fb98";
 			};
 			name = Release;
 		};
