@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @interface SecondViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate>
 @property IBOutlet UIButton *btn;
 @property IBOutlet UIButton *endBtn;

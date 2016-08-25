@@ -47,29 +47,45 @@
     
     RACSignal *loggingSignal = [RACSignal createSignal:^ RACDisposable * (id<RACSubscriber> subscriber) {
         subscriptions++;
-        [subscriber sendCompleted];
+//        [subscriber sendCompleted];
+        [subscriber sendNext:[NSString stringWithFormat:@"%d",subscriptions]];
         return nil;
     }];
 
-//    loggingSignal = [loggingSignal doNext:^(id x) {
-//        NSLog(@"donext");
-//    }];
-//
-//    [loggingSignal subscribeNext:^(id x) {
-//        NSLog(@"subscribenetx=%@",x);
-//    }];
+    loggingSignal = [loggingSignal doNext:^(id x) {
+        NSLog(@"donext");
+    }];
+
+    [loggingSignal subscribeNext:^(id x) {
+        NSLog(@"subscribenetx=%@",x);
+    }];
     
+//    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@1];
+//        [subscriber sendCompleted];
+//        return nil;
+//    }] doNext:^(id x) {
+//        // 执行[subscriber sendNext:@1];之前会调用这个Block
+//        NSLog(@"doNext");;
+//    }] doCompleted:^{
+//        // 执行[subscriber sendCompleted];之前会调用这个Block
+//        NSLog(@"doCompleted");;
+//        
+//    }] subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@",x);
+//    }];
     // 不会输出任何东西
-    loggingSignal = [loggingSignal doCompleted:^{
-        NSLog(@"about to complete subscription %u", subscriptions);
-    }];
-    
-    // 输出:
-    // about to complete subscription 1
-    // subscription 1
-    [loggingSignal subscribeCompleted:^{
-        NSLog(@"subscription %u", subscriptions);
-    }];
+//    loggingSignal = [loggingSignal doCompleted:^{
+//        NSLog(@"about to complete subscription %u", subscriptions);
+//    }];
+//    
+//    // 输出:
+//    // about to complete subscription 1
+//    // subscription 1
+//    [loggingSignal subscribeCompleted:^{
+//        NSLog(@"subscription %u", subscriptions);
+//    }];
 
 }
 - (void)didReceiveMemoryWarning {

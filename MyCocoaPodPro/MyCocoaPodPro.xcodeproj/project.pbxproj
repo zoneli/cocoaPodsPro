@@ -20,6 +20,7 @@
 		E16DB5FA1CF03BB4007DA161 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5F91CF03BB4007DA161 /* FourthViewController.m */; };
 		E16DB6001CF03F18007DA161 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB5FF1CF03F18007DA161 /* RootNavViewController.m */; };
 		E16DB6031CF03F69007DA161 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16DB6021CF03F69007DA161 /* MainTabbarViewController.m */; };
+		E1940E5D1D6ED452004B4679 /* LEEAudioService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1940E5C1D6ED452004B4679 /* LEEAudioService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		E16DB5FF1CF03F18007DA161 /* RootNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavViewController.m; sourceTree = "<group>"; };
 		E16DB6011CF03F69007DA161 /* MainTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
 		E16DB6021CF03F69007DA161 /* MainTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
+		E1940E5B1D6ED452004B4679 /* LEEAudioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEEAudioService.h; sourceTree = "<group>"; };
+		E1940E5C1D6ED452004B4679 /* LEEAudioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEEAudioService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		E16DB5D81CF003CA007DA161 /* MyCocoaPodPro */ = {
 			isa = PBXGroup;
 			children = (
+				E1940E5A1D6ED41F004B4679 /* Entity */,
 				E149BA121D63459B002BD8B4 /* Source */,
 				E16DB5DC1CF003CA007DA161 /* AppDelegate.h */,
 				E16DB5DD1CF003CA007DA161 /* AppDelegate.m */,
@@ -137,6 +141,15 @@
 				E16DB5DA1CF003CA007DA161 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1940E5A1D6ED41F004B4679 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E1940E5B1D6ED452004B4679 /* LEEAudioService.h */,
+				E1940E5C1D6ED452004B4679 /* LEEAudioService.m */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1940E5D1D6ED452004B4679 /* LEEAudioService.m in Sources */,
 				E16DB5FA1CF03BB4007DA161 /* FourthViewController.m in Sources */,
 				E16DB5E41CF003CA007DA161 /* SecondViewController.m in Sources */,
 				E16DB6001CF03F18007DA161 /* RootNavViewController.m in Sources */,
