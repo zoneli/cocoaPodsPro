@@ -15,6 +15,7 @@
     AVQueuePlayer* _queuePlayer;
 
 }
+@property (weak, nonatomic) IBOutlet UIButton *cBtn;
 @property(nonatomic,copy)NSString *netUrl;
 @property(nonatomic,copy)NSString *mnetUrl;
 @property(nonatomic,copy)NSString *localUrl;
@@ -25,10 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _netUrl = @"http://g3.letv.com/vod/v1/MTg5LzIzLzc2L2xldHYtZ3VnLzE3L3Zlcl8wMF8yMi0xMDU0MTg4Mzc4LWF2Yy0yNTc2MjUtYWFjLTMyNzQwLTE0OTIwLTU2MzIyNi0yNzUxYTMxNDE4YjEwNWFjYTlhYzM4YjUwYmVkYjA3Ny0xNDY3ODc3MjE2NTU3Lm1wNA==?platid=100&splatid=10000&gugtype=1&mmsid=59936443&type=m_liuchang_mp4&playid=0&termid=2&pay=0&hwtype=iphone&ostype=macos&m3v=3";
-    _mnetUrl= @"http://g3.letv.com/vod/v1/MTQ3LzcvOS9sZXR2LWd1Zy8xNy92ZXJfMDBfMjItMzMyMDMxNzUtYXZjLTE2MTc3MC1hYWMtMzIxODktMTUwMDAtMzgxNjc0LWEyZjgzZDkzZDBjOWMwODk2NTk3NTgzYTE2MmNlOGUxLTE0MzY4NzQwNjkyNzEubXA0?platid=100&splatid=10000&gugtype=1&mmsid=33091820&type=m_liuchang_mp4&tss=ios";
-    
+//    _mnetUrl= @"http://g3.letv.com/vod/v1/MTQ3LzcvOS9sZXR2LWd1Zy8xNy92ZXJfMDBfMjItMzMyMDMxNzUtYXZjLTE2MTc3MC1hYWMtMzIxODktMTUwMDAtMzgxNjc0LWEyZjgzZDkzZDBjOWMwODk2NTk3NTgzYTE2MmNlOGUxLTE0MzY4NzQwNjkyNzEubXA0?platid=100&splatid=10000&gugtype=1&mmsid=33091820&type=m_liuchang_mp4&tss=ios";
+
+    _mnetUrl = @"http://g3.letv.com/vod/v1/MjQ0LzYvMTA0L2xldHYtZ3VnLzE3L3Zlcl8wMF8yMi0xMDYyNjM0MzIzLWF2Yy0yNDg5OTQtYWFjLTEyODI5MC0xNDk2MC03Mjk3NTUtZjU5YTY5ZmJkNmY4OWRlYmUyOTg3MTM3MGFkMWQ2ZWMtMTQ3MjYwOTAxODQxMC5tcDQ=?platid=100&splatid=10000&gugtype=1&mmsid=61149822&type=ad_mobile_baseline_logo";
     _localUrl= [[NSBundle mainBundle]pathForResource:@"1" ofType:@"mp4"];
-//    [self createAVQueuePlayer];
+    [_cBtn addTarget:self action:@selector(createAVQueuePlayer) forControlEvents:UIControlEventTouchUpInside];    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -80,7 +82,6 @@
             NSLog(@"-----AVPlayerStatusFailed-");
         }else if(AVPlayerStatusUnknown == [tempplayerItem status]){
             NSLog(@"-----AVPlayerStatusUnknown-");
-            
         }
     }
 }

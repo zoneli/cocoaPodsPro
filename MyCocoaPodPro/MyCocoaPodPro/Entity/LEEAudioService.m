@@ -7,6 +7,8 @@
 //
 
 #import "LEEAudioService.h"
+#import <Photos/PHPhotoLibrary.h>
+#import <Photos/PHAssetChangeRequest.h>
 #define CAPTURE_FRAMES_PER_SECOND       20
 #define SAMPLE_RATE                     44100
 #define VideoWidth                      480
@@ -67,6 +69,12 @@
     [captureSession stopRunning];
     [_writer finishWritingWithCompletionHandler:^{
         NSLog(@"finish");
+//   保存到相册
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:self.filePath]];
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            NSLog(@"保存成功");
+        }];
     }];
     
     // 获取程序Documents目录路径
@@ -152,17 +160,17 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSMutableString * path = [[NSMutableString alloc]initWithString:documentsDirectory];
     [path appendString:@"/video.mp4"];
-    //    delete item
-    if (path) {
-        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    self.filePath = path;
+    if (self.filePath) {
+        [[NSFileManager defaultManager] removeItemAtPath:self.filePath error:nil];
     }
-    NSURL* url = [NSURL fileURLWithPath:path];
+    NSURL* url = [NSURL fileURLWithPath:self.filePath];
     _writer = [AVAssetWriter assetWriterWithURL:url fileType:AVFileTypeMPEG4 error:nil];
     //使其更适合在网络上播放
     _writer.shouldOptimizeForNetworkUse = YES;
     //初始化视频输出
-    NSInteger cy = 640;
-    NSInteger cx = 200;
+    NSInteger cy = 1136;
+    NSInteger cx = 640;
     [self initVideoInputHeight:cy width:cx];
     Float64 rate = 44100.0;
     int ch = 1;

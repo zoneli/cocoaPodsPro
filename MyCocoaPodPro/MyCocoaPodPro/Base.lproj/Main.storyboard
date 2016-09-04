@@ -75,6 +75,7 @@
         <!--附近-->
         <scene sceneID="h9G-Dj-b3P">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bje-7o-zbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="附近" id="Zrv-an-Iwn" userLabel="附近" customClass="ThirdViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sLC-Q5-ICd"/>
@@ -83,13 +84,25 @@
                     <view key="view" contentMode="scaleToFill" id="GIt-RS-XkJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-od-sql">
+                                <rect key="frame" x="67" y="370" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yWT-od-sql" firstAttribute="leading" secondItem="GIt-RS-XkJ" secondAttribute="leadingMargin" constant="47" id="YNE-b2-faQ"/>
+                            <constraint firstItem="yWT-od-sql" firstAttribute="top" secondItem="sLC-Q5-ICd" secondAttribute="bottom" constant="306" id="bsi-YG-6m7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="附近" image="second" id="amd-pY-MHW"/>
+                    <connections>
+                        <outlet property="cBtn" destination="yWT-od-sql" id="e4U-rW-ntf"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bje-7o-zbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="1129"/>
+            <point key="canvasLocation" x="410" y="1107"/>
         </scene>
         <!--我的-->
         <scene sceneID="CPk-Up-YIt">
